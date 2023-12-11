@@ -47,11 +47,11 @@ public class Karakter {
     }
 
     public void hasznal(String nev) {
-        hasznal(nev, eletero);
+        hasznal(nev, 1);
     }
 
     public void hasznal(String nev, int darab) {
-        hasznal(nev, darab, true);
+        hasznal(nev, darab, false);
     }
 
     public void hasznal(String nev, int darab, boolean hasznalhato) {
@@ -75,13 +75,23 @@ public class Karakter {
         int index = 0;
         int darab = 0;
         for (Targy felszerelese : felszereles) {
-            if (felszerelese.getNev().equals(felszereles.get(index).getNev()) ) {
-                darab++;
-                if (!(felszerelese.getNev().equals(felszereles.get(index).getNev())) && darab < 2) {
-                    System.out.print(felszerelese.nev + ": " + darab + ", ");
-
+            if (felszerelese.getNev().equals(felszereles.get(index).getNev()) && !(darab > 1)) {
+                if (!(felszerelese.getNev().equals(felszereles.get(index).getNev()))) {
+                    darab = 0;
                 }
+                System.out.print(felszerelese.nev + ": " + darab + ", ");
                 index++;
+                darab++;
+            }
+        }
+        System.out.println("életerő: " + eletero + ", " + "ügyesség: " + ugyesseg + ", " + "szerencse: " + szerencse);
+    }
+
+    public void kiir2() {
+        System.out.println("A tulajdonodban van: ");
+        for (Targy felszerelese : felszereles) {
+            if (felszerelese.getNev().equals(felszerelese.nev)) {
+                System.out.print(felszerelese.nev + ", ");
             }
         }
         System.out.println("életerő: " + eletero + ", " + "ügyesség: " + ugyesseg + ", " + "szerencse: " + szerencse);

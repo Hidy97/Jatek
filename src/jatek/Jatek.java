@@ -19,7 +19,13 @@ public class Jatek {
         elf.felvesz(fizetoEszkoz2);
         
         //System.out.println(elf.toString());
-        elf.kiir();
+        //elf.kiir();
+        elf.kiir2();
+        elf.hasznal("kard");
+        elf.kiir2();
+        elf.hasznal("aranyérme", 2, true);
+        elf.kiir2();
+        
     }
     
 }
