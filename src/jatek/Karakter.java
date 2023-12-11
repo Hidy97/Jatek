@@ -21,7 +21,7 @@ public class Karakter {
 
     public Karakter(ArrayList<Targy> felszereles, int eletero, int ugyesseg, int szerencse) {
         this.felszereles = felszereles;
-        this.eletero = 2*dobas()+12;
+        this.eletero = dobas()+dobas()+12;
         this.ugyesseg = dobas()+6;
         this.szerencse = dobas()+6;
     }
@@ -35,5 +35,10 @@ public class Karakter {
         felszereles.add(targy);
         return targy;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Karakter{" + "felszereles=" + felszereles + ", eletero=" + eletero + ", ugyesseg=" + ugyesseg + ", szerencse=" + szerencse + '}';
+    }
+        
 }
