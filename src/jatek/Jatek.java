@@ -1,8 +1,30 @@
 package jatek;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Jatek {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        Jatek.feladatok();
+        jatekMent();
+        
+    }
+
+    private static void jatekMent() throws FileNotFoundException, IOException {
+        try(ObjectOutputStream objKi= new ObjectOutputStream(new FileOutputStream("karakterek.bin"))){
+        }catch (FileNotFoundException ex) {
+            Logger.getLogger(Jatek.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Jatek.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private static void feladatok() {
         Karakter elf = new Karakter();
         Targy fegyver1 = new Targy("Kard", "Egy ősiromok között talált rozsdás sz...");
         Targy fegyver2 = new Targy("Kard", "A fény templomának ceremoniális kardja (meglepően éles...).");
@@ -25,7 +47,6 @@ public class Jatek {
         elf.kiir2();
         elf.hasznal("aranyérme", 2, true);
         elf.kiir2();
-        
     }
     
 }

@@ -63,7 +63,7 @@ public class Karakter {
                     System.out.println("Nincs elég ebből a tárgyból!");
                     hasznalhato = false;
                 } else {
-                    felszereles.remove(felszerelese);
+                    felszereles.remove(2);
                     hasznalhato = true;
                 }
             }
