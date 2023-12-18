@@ -9,3 +9,16 @@ A probléma: mozgás szerkezet
 	Kezelhetetlen elágazás helyett hogy lehetne megoldani...
 
 Megoldási lehetőségek
+Tervezési minták
+https://okt.inf.szte.hu/prog1/gyakorlat/eloadas/TervezesiMintak/mintakAttekintese/
+https://users.iit.uni-miskolc.hu/ficsor/Infterv2004Hallg/BarthaTibor/TervezesiMintak.pdf
+https://gyires.inf.unideb.hu/GyBITT/21/ch04s03.html
+
+építő -build
+állapot -state
+díszítő -decorator
+Decorator (Wrapper) -
+ Díszítő: További felelősségeket/tulajdonságokat csatol dinamikusan az objektumhoz.
+megfigyelő -observer
+Observer (Dependents, Publish-Subscribe) -
+ Megfigyelő: Egy objektum állapotát megfigyeli, az objektum állapotának megváltozásáról pedig a tőle függő objektumokat értesíti.
