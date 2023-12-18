@@ -9,22 +9,21 @@ public class Jobbra extends Helyszin{
 
     @Override
     public String egyikBtnFelirata() {
-        return "???";
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public Helyszin egyikIrany() {
-        return new Balra();
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
+    public String masikBtnFelirata() {
+        return "jobbra";
+    }
+
+
     public Helyszin masikIrany() {
         return new Jobbra();
-    }
-
-    @Override
-    public String masikBtnFelirata() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

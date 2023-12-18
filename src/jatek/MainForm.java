@@ -4,16 +4,17 @@ import java.awt.TextArea;
 
 public class MainForm extends javax.swing.JFrame {
 
-
     private Helyszin helyszin;
+    private MasikIrany masikIrany;
+
     public MainForm() {
         initComponents();
-        
+
         helyszin = new Start();
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
         if (helyszin instanceof MasikIrany) {
             jButton1.setVisible(true);
-        }else{
+        } else {
             jButton1.setVisible(false);
         }
         jButton2.setText(helyszin.egyikBtnFelirata());
@@ -85,12 +86,12 @@ public class MainForm extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         helyszin = helyszin.egyikIrany();
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
-        //jButton1.setVisible(true);
+
         jButton2.setText(helyszin.egyikBtnFelirata());
-        
+
         if (helyszin instanceof MasikIrany) {
             jButton1.setVisible(true);
-        }else{
+        } else {
             jButton1.setVisible(false);
         }
         /*Scrollbar rögtön felül kezd*/
@@ -99,15 +100,15 @@ public class MainForm extends javax.swing.JFrame {
 
     /*másik irány*/
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     helyszin = helyszin.masikIrany();
+        helyszin = masikIrany.masikIrany();
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
-        //jButton1.setVisible(true);
-        jButton2.setText(helyszin.egyikBtnFelirata());
-        
-        if (helyszin instanceof MasikIrany) {
-            jButton1.setVisible(true);
-        }else{
-            jButton1.setVisible(false);
+
+        jButton1.setText(masikIrany.masikBtnFelirata());
+
+        if (helyszin instanceof Helyszin) {
+            jButton2.setVisible(true);
+        } else {
+            jButton2.setVisible(false);
         }
         /*Scrollbar rögtön felül kezd*/
         jTextArea1.setCaretPosition(0);
