@@ -1,10 +1,10 @@
 package jatek;
 
-public class Balra extends Helyszin {
+public class Jobbra extends Helyszin{
 
     @Override
     public String leiras() {
-        return "Ez balra van!";
+        return "Ez jobbra van...";
     }
 
     @Override
